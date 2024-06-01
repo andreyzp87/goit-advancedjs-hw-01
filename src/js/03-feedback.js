@@ -12,6 +12,9 @@ if (savedData) {
 }
 
 function onInput(event) {
+  if (!event.currentTarget) {
+    return;
+  }
   const formData = new FormData(event.currentTarget);
 
   localStorage.setItem(
